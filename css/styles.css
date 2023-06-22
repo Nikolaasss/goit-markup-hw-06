@@ -2,6 +2,18 @@
   /*Fonts*/
   --main-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
+  /*Colors */
+  --primary-brand: #4d5ae5;
+  --pressed-state: #404bbf;
+  --dark: #2e2f42;
+  --success: #31d0aa;
+  --text: #434455;
+  --subtle-text: #8e8f99;
+  --accent: #e7e9fc;
+  --light: #f4f4fd;
+  --modal-overlay: #2e2f4266;
+  --hero-background: #2e2f42b2;
+
   /*Text colors*/
   --main-txt-cl: #757575;
   --secondary-txt-color: #212121;
@@ -15,7 +27,7 @@
 }
 body {
   font-family: var(--main-font);
-  color: var(--main-txt-cl);
+  color: var(--dark)
   background-color: var(--light-bg-cl);
   font-size: 14px;
   letter-spacing: 0.03em;
@@ -52,7 +64,7 @@ button {
   padding-bottom: 94px;
 }
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 
