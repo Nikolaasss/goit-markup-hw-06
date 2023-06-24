@@ -1,0 +1,36 @@
+@media screen and (min-width: 428px) {
+  .container {
+    max-width: 396px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+  .customers-item {
+    width: calc((100% - 48px) / 3);
+  }
+  .customers-list {
+    column-gap: 24px;
+  }
+  .customers-link {
+  width: 168px;
+  height: 88px;
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+  .customers-item {
+    width: calc((100% - 120px) / 6);
+  }
+  .customers-link {
+  width: 168px;
+  height: 88px;
+}
+.customers-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+}
