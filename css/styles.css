@@ -13,7 +13,7 @@
   --light: #f4f4fd;
   --modal-overlay: #2e2f4266;
   --hero-background: #2e2f42b2;
-
+/* 
   /*Text colors*/
   --main-txt-cl: #757575;
   --secondary-txt-color: #212121;
@@ -21,7 +21,7 @@
   /*BG colors */
   --dark-bg-cl: #2f303a;
   --light-bg-cl: #ffffff;
-  --gray-bg-cl: #f5f4fa;
+  --gray-bg-cl: #f5f4fa; */
   /*Others */
   --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -66,7 +66,7 @@ button {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 15px; 
 
   /*outline: 2px solid red;
   outline-offset: -2px;*/
@@ -86,7 +86,7 @@ button {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  color: var(--secondary-txt-color);
+  color: var(--dark);
 }
 .visually-hidden {
   position: absolute;
@@ -288,28 +288,30 @@ button {
 
 /*Team section*/
 .team {
-  background-color: var(--gray-bg-cl);
+  background-color: var(--light);
 }
 .team-description {
   padding: 30px 0;
 }
 .team-list {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  /* gap: 30px; */
 }
 .team-item {
   background: #ffffff;
-
+  width: 100%;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
 .team-subtitle {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.19;
   text-align: center;
-  color: var(--secondary-txt-color);
+  color: var(--dark);
 }
 .team-desc {
   margin-top: 10px;
@@ -319,9 +321,11 @@ button {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  color: var(--text);
 }
 
 /*Customers section*/
+
 /* .customers {
   display: flex;
   align-items: center;
@@ -599,8 +603,8 @@ address {
   justify-content: center;
   width: 44px;
   height: 44px;
-  color: #afb1b8;
-  background-color: var(--light-bg-cl);
+  color: var(--light);
+  background-color: var(--primary-brand);
   border-radius: 50%;
   transition: background-color var(--animation);
 }
@@ -610,8 +614,8 @@ address {
 }
 .socials-link:hover,
 .socials-link:focus {
-  color: var(--light-bg-cl);
-  background-color: var(--accent-txt-cl);
+  color: var(--light);
+  background-color: var(--pressed-state);
 }
 
 /*Спосіб з вказанням fill для іконки*/
