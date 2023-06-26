@@ -24,23 +24,23 @@
   .customers-link {
     width: 168px;
     height: 88px;
- }
-
+  }
+}
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
   }
-.work-list {
-  display: flex;
-  gap: 30px;
-}
-.work {
-  padding-top: 0;
-  display: block;
-}
-.work-item {
-  position: relative;
-}
+  .work-list {
+    display: flex;
+    gap: 30px;
+  }
+  .work {
+    padding-top: 0;
+    display: block;
+  }
+  .work-item {
+    position: relative;
+  }
   .team-item {
     width: calc((100% - 72px) / 4);
   }
@@ -58,4 +58,4 @@
     padding-top: 120px;
     padding-bottom: 120px;
   }
-  }
+}
