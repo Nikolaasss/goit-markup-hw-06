@@ -577,25 +577,39 @@ address {
 /*Footer section*/
 .footer {
   background-color: var(--dark);
-  padding: 60px 0;
+  padding: 96px 0;
 }
-.footer-logo-address {
-  margin-right: 70px;
+.foter-container {
+  display: flex;
+  /* align-items: baseline; */
+  width: 100%;
+  flex-direction: column;
+}
+.footer-logo-txt {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .footer-logo-link {
   margin-right: 0;
+  color: var(--primary-brand);
+  font-size: 18px;
+  font-family: Raleway;
+  font-weight: 800;
+  line-height: 1.17;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
 }
 .footer-logo-accent {
-  color: var(--light-bg-cl);
+  color: var(--light);
 }
 
-.footer-addres {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  color: #ffffff;
-  transition: color var(--animation);
+.footer-txt {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1.5px;
+  color: var(--light);
+  padding: 0;
 }
 .footer-mail,
 .footer-tel {
@@ -621,29 +635,27 @@ address {
   color: var(--accent-txt-cl);
 }
 .foter-subtitle {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--light-bg-cl);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  color: #fff;
   margin-bottom: 20px;
-}
-.foter-container {
-  display: flex;
-  align-items: baseline;
+  padding-top: 72px;
 }
 .foter-socials {
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .foter-socials-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  color: var(--light-bg-cl);
-  background-color: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  color: var(--light);
+  background-color: var(--primary-brand);
   border-radius: 50%;
   transition: color var(--animation), background-color var(--animation);
 }
@@ -652,11 +664,12 @@ address {
 }
 .foter-socials-link:hover,
 .foter-socials-link:focus {
-  color: var(--light-bg-cl);
-  background-color: var(--accent-txt-cl);
+  color: var(--light);
+  background-color: var(--success);
 }
 .foter-mailing-list form {
   display: flex;
+  flex-direction: column;
 }
 .foter-mailing-list input {
   background: none;
@@ -688,9 +701,9 @@ address {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  color: var(--light-bg-cl);
+  color: #fff;
   cursor: pointer;
-  background-color: var(--accent-txt-cl);
+  background-color: var(--primary-brand);
   display: flex;
 }
 .mailing-icon {
