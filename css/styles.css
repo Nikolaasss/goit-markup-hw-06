@@ -481,6 +481,9 @@ address {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+.team-img {
+  margin: auto;
+}
 .team-subtitle {
   font-weight: 500;
   font-size: 20px;
@@ -516,7 +519,6 @@ address {
   }
 }
 /*Customers section*/
-
 .customers-item {
   width: calc((100% - 16px) / 2);
 }
@@ -610,6 +612,8 @@ address {
   letter-spacing: 1.5px;
   color: var(--light);
   padding: 0;
+  width: 268px;
+  height: 72px;
 }
 .footer-mail,
 .footer-tel {
@@ -625,14 +629,6 @@ address {
 }
 .footer-item:last-child {
   margin-bottom: 0;
-}
-.footer-addres:hover,
-.footer-addres:focus,
-.footer-mail:hover,
-.footer-mail:focus,
-.footer-tel:hover,
-.footer-tel:focus {
-  color: var(--accent-txt-cl);
 }
 .foter-subtitle {
   font-weight: 500;
@@ -667,22 +663,25 @@ address {
   color: var(--light);
   background-color: var(--success);
 }
+.foter-mailing-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .foter-mailing-list form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .foter-mailing-list input {
   background: none;
   border: none;
   background-color: var(--dark-bg-cl);
-  width: 358px;
   height: 50px;
-  color: var(--light-bg-cl);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding: 16px;
-  margin-right: 12px;
 }
 .foter-mailing-list input::placeholder {
   font-size: 16px;
@@ -693,21 +692,53 @@ address {
   color: rgba(255, 255, 255, 0.6);
 }
 .mailing-btn-submit {
-  width: 200px;
-  height: 50px;
-  letter-spacing: 0.06em;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.64px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.5;
   color: #fff;
   cursor: pointer;
   background-color: var(--primary-brand);
   display: flex;
+  padding: 8px 24px;
+  border: none;
+  margin: 0 auto;
+  margin-top: 16px;
 }
 .mailing-icon {
   margin-left: 10px;
+}
+@media screen and (min-width: 768px) {
+  .foter-container {
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 24px;
+  }
+  .foter-mailing-list form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 24px;
+  }
+  .foter-subtitle {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer-logo-txt {
+    margin-right: 120px;
+  }
+  .foter-socials {
+    margin-right: 80px;
+  }
 }
 /*Portfolio section*/
 .project-list-btn {
