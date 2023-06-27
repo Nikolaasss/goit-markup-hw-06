@@ -157,7 +157,6 @@ address {
 .mobile-menu-adress-list {
 }
 .mobile-menu-tel {
-  display: block;
   font-size: 30px;
   font-family: Roboto;
   font-weight: 700;
@@ -986,21 +985,27 @@ address {
 }
 .modal-title {
   display: block;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: Roboto;
+  line-height: 1.5;
   text-align: center;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.32px;
   margin-bottom: 12px;
-  color: var(--secondary-txt-color);
+  color: var(--dark);
 }
+
 .form-element {
   display: flex;
   flex-direction: column;
 }
 .form-element label {
   margin-bottom: 4px;
+  color: var(--subtle-text);
   font-size: 12px;
+  font-family: Roboto;
+  line-height: 1.2;
+  letter-spacing: 0.48px;
 }
 .input-wrap {
   position: relative;
@@ -1011,6 +1016,7 @@ address {
   top: 50%;
   left: 12px;
   translate: 0 -50%;
+  color: var(--dark);
 }
 .form-element input {
   height: 40px;
@@ -1036,6 +1042,9 @@ address {
 .textarea {
   margin-bottom: 20px;
 }
+.form-element textarea::placeholder {
+  opacity: 0.5;
+}
 .form-element textarea {
   height: 120px;
   border: none;
@@ -1047,7 +1056,7 @@ address {
   transition: border var(--animation);
 }
 .form-element textarea:focus {
-  border: 1px solid var(--accent-txt-cl);
+  border: 1px solid var(--pressed-state);
   border-radius: 4px;
   outline: none;
 }
@@ -1058,15 +1067,17 @@ address {
   margin-bottom: 30px;
 }
 .modal-accept {
+  font-family: Roboto;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.48px;
   display: flex;
   align-items: center;
+  color: var(--subtle-text);
 }
 .modal-link {
-  color: var(--accent-txt-cl);
+  color: var(--primary-brand);
   padding-left: 4px;
 }
 .checkbox {
@@ -1080,22 +1091,21 @@ address {
   margin-right: 9px;
 }
 .accept input:checked + label .checkbox {
-  background: var(--accent-txt-cl);
-  border: 2px solid var(--accent-txt-cl);
+  border: 2px solid var(--modal-overlay);
 }
 .modal-btn-submit {
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
-  padding: 10px 52px;
+  padding: 16px 32px;
   border: none;
-  line-height: 1.88;
-
-  color: var(--light-bg-cl);
+  line-height: 0.64px;
+  color: #fff;
   cursor: pointer;
-  background-color: var(--accent-txt-cl);
+  background-color: var(--primary-brand);
+  text-align: center;
 }
 @media screen and (min-width: 428px) {
   .modal {
