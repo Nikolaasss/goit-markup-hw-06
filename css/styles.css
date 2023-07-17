@@ -838,7 +838,7 @@ address {
 .cards-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 24px;
 }
 .cards-description {
   border: 1px solid #eeeeee;
