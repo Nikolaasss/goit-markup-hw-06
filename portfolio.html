@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <!--Fonts start-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <!--Fonts end-->
@@ -177,7 +177,7 @@
           <h1 class="visually-hidden">Проекти</h1>
           <ul class="project-list-btn list">
             <li class="project-item-btn">
-              <button class="projects-btn projects-btn-current" type="button">Усі</button>
+              <button class="projects-btn" type="button">Усі</button>
             </li>
             <li class="project-item-btn">
               <button class="projects-btn" type="button">Веб-сайти</button>
@@ -192,18 +192,41 @@
               <button class="projects-btn" type="button">Маркетинг</button>
             </li>
           </ul>
-          <ul></ul>
           <ul class="cards-list list">
             <li class="cards-item">
               <a href class="link">
                 <div class="overlay-cards-img">
-                  <img
-                    class="cards-img"
-                    src="./images/projects/img-1.jpg"
-                    alt="Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- Desktop screen -->
+
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="./images/gallery/img-1_lg.jpg 1x, ./images/gallery/img-1_lg@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- Tablet screen -->
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/gallery/img-1_md.jpg 1x, ./images/gallery/img-1_md@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- Mobile screen -->
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="./images/gallery/img-1_sm.jpg 1x, ./images/gallery/img-1_sm@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <img
+                      class="card-img"
+                      src="./images/gallery/img-1_sm.jpg"
+                      alt="Ноутбук"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
