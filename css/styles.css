@@ -136,8 +136,7 @@ address {
   line-height: 0;
 }
 .mobile-menu-list {
-  margin-top: 80px;
-  margin-bottom: 284px;
+  margin-bottom: auto;
 }
 .mobile-menu-item:not(:last-child) {
   margin-bottom: 24px;
@@ -175,9 +174,7 @@ address {
 }
 .mobile-menu-soc {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 56px;
+  justify-content: space-between;
   margin-top: 48px;
 }
 .mobile-menu-soc-link {
@@ -189,6 +186,9 @@ address {
   color: var(--light);
   background-color: var(--primary-brand);
   border-radius: 50%;
+}
+.mobile-menu-soc-icon {
+  fill: #fff;
 }
 
 /*Альтернатива gap*/
@@ -242,7 +242,7 @@ address {
 .header-link-current::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   display: block;
   width: 100%;
@@ -251,9 +251,7 @@ address {
   background-color: var(--pressed-state);
   border-radius: 2px;
 }
-.header-mail,
-.header-tel {
-  font-weight: 500;
+.header-contact {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.48px;
@@ -279,7 +277,10 @@ address {
 }
 .menu-container {
   position: relative;
-  padding: 24px 40px;
+  padding: 80px 35px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .menu-close-btn {
   position: absolute;
@@ -292,6 +293,12 @@ address {
   height: 24px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 428px) {
+  .mobile-menu-soc {
+    justify-content: center;
+    gap: 56px;
+  }
 }
 @media screen and (min-width: 768px) {
   .header-list {
@@ -322,6 +329,10 @@ address {
     flex-direction: row;
     gap: 40px;
   }
+  .header-contact {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 /*Hero section*/
 .hero {
@@ -332,6 +343,7 @@ address {
     url(../images/hero/hero-bg-mob-1x.jpg);
   background-position: center;
   margin: 0 auto;
+  background-size: cover;
 }
 .hero-title {
   max-width: 320px;
@@ -526,12 +538,12 @@ address {
 }
 .team-list {
   display: flex;
-  flex-wrap: wrap;
-  row-gap: 64px;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 .team-item {
   background: #ffffff;
-  width: 100%;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -557,12 +569,12 @@ address {
   color: var(--text);
 }
 @media screen and (min-width: 768px) {
-  .team-item {
-    width: calc((100% - 24px) / 2);
-  }
   .team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 64px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -590,7 +602,7 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 190px;
+  width: 100%;
   height: 88px;
   color: var(--subtle-text);
 
@@ -607,18 +619,20 @@ address {
   border-color: var(--pressed-state);
 }
 @media screen and (min-width: 768px) {
+  .customers-container {
+    width: 552px;
+  }
   .customers-item {
     width: calc((100% - 48px) / 3);
   }
   .customers-list {
     column-gap: 24px;
   }
-  .customers-link {
-    width: 168px;
-    height: 88px;
-  }
 }
 @media screen and (min-width: 1158px) {
+  .customers-container {
+    width: 100%;
+  }
   .customers-item {
     width: calc((100% - 120px) / 6);
   }
@@ -641,6 +655,7 @@ address {
   /* align-items: baseline; */
   width: 100%;
   flex-direction: column;
+  gap: 72px;
 }
 .footer-logo-txt {
   display: flex;
@@ -648,14 +663,10 @@ address {
   flex-direction: column;
 }
 .footer-logo-link {
+  display: flex;
   margin-right: 0;
-  color: var(--primary-brand);
-  font-size: 18px;
-  font-family: Raleway;
-  font-weight: 800;
-  line-height: 1.17;
-  letter-spacing: 0.54px;
-  text-transform: uppercase;
+  padding: 0;
+  margin-bottom: 16px;
 }
 .footer-logo-accent {
   color: var(--light);
@@ -664,11 +675,10 @@ address {
 .footer-txt {
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.32px;
   color: var(--light);
   padding: 0;
   width: 268px;
-  height: 72px;
 }
 .footer-mail,
 .footer-tel {
@@ -692,7 +702,6 @@ address {
   letter-spacing: 0.32px;
   color: #fff;
   margin-bottom: 20px;
-  padding-top: 72px;
 }
 .foter-socials {
   display: flex;
@@ -762,29 +771,44 @@ address {
   border: none;
   margin: 0 auto;
   margin-top: 16px;
+  align-items: center;
 }
 .mailing-icon {
-  margin-left: 10px;
+  margin-left: 16px;
 }
 @media screen and (min-width: 768px) {
   .foter-container {
     align-items: baseline;
     flex-wrap: wrap;
-    justify-content: center;
+
     flex-direction: row;
-    width: 100%;
-    gap: 24px;
+    width: 556px;
+    gap: 72px 24px;
+  }
+  .footer-logo-txt {
+    align-items: flex-start;
+  }
+  .foter-socials {
+    align-items: flex-start;
+  }
+  .foter-mailing-list {
+    align-items: flex-start;
   }
   .foter-mailing-list form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    align-items: baseline;
     gap: 24px;
+  }
+  .foter-mailing-list input {
+    width: 264px;
   }
   .foter-subtitle {
     text-align: left;
+  }
+  .mailing-btn-submit {
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -792,7 +816,19 @@ address {
     margin-right: 120px;
   }
   .foter-socials {
-    margin-right: 80px;
+    margin-right: auto;
+  }
+  .footer {
+    padding: 100px 0;
+  }
+  .foter-container {
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .foter-mailing-list form {
+    flex-wrap: nowrap;
+    width: 453px;
   }
 }
 /*Portfolio section*/
@@ -898,7 +934,7 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 24px;
 }
 .socials-link {
   display: flex;
@@ -966,19 +1002,21 @@ address {
 }
 .modal-btn-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 24px;
+  right: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   padding: 0;
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid #0000001a;
   cursor: pointer;
   transition: fill var(--animation);
+  line-height: 0;
+  background-color: var(--accent);
 }
 .modal-btn-close:hover {
   fill: var(--accent-txt-cl);
@@ -1021,7 +1059,7 @@ address {
 .form-element input {
   height: 40px;
   border: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--subtle-text);
   border-radius: 4px;
   padding-left: 42px;
   width: 100%;
@@ -1030,14 +1068,14 @@ address {
   transition: border var(--animation);
 }
 .form-element input:focus {
-  border: 1px solid var(--accent-txt-cl);
+  border: 1px solid var(--primary-brand);
   border-radius: 4px;
 }
 .form-element input + svg {
   transition: fill var(--animation);
 }
 .form-element input:focus + svg {
-  fill: var(--accent-txt-cl);
+  fill: var(--primary-brand);
 }
 .textarea {
   margin-bottom: 20px;
@@ -1083,25 +1121,32 @@ address {
 .checkbox {
   width: 16px;
   height: 15px;
-  border: 2px solid var(--secondary-txt-color);
+  border: 2px solid var(--modal-overlay);
   border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 9px;
 }
-.accept input:checked + label .checkbox {
+/* .accept input:checked + label .checkbox {
   border: 2px solid var(--modal-overlay);
+} */
+.input-checkbox:checked + .modal-accept > .checkbox {
+  background-color: var(--pressed-state);
 }
 .modal-btn-submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
-  padding: 16px 32px;
+  min-width: 169px;
+  height: 56px;
   border: none;
-  line-height: 0.64px;
+  line-height: 1.5;
   color: #fff;
   cursor: pointer;
   background-color: var(--primary-brand);
