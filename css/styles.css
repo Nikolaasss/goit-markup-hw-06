@@ -337,7 +337,7 @@ address {
 }
 /*Hero section*/
 .hero {
-  background-color: var(--dark-bg-cl);
+  background-color: var(--hero-background);
   padding: 112px 0;
   max-width: 1440px;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -852,11 +852,11 @@ address {
   background-color: var(--light);
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.5;
   text-align: center;
   color: var(--primary-brand);
   cursor: pointer;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.64px;
   transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
 }
 .projects-btn:hover,
