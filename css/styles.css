@@ -274,6 +274,7 @@ address {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  z-index: 100;
 }
 .menu-container {
   position: relative;
@@ -746,7 +747,6 @@ address {
 .foter-mailing-list input {
   background: none;
   border: none;
-  background-color: var(--dark-bg-cl);
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -754,12 +754,14 @@ address {
   padding: 16px;
 }
 .foter-mailing-list input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2;
   display: flex;
   align-items: center;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.48px;
+  color: #fff;
+  opacity: 0.6000000238418579;
 }
 .mailing-btn-submit {
   font-family: Roboto, sans-serif;
@@ -886,21 +888,22 @@ address {
 .cards-description {
   border: 1px solid #eeeeee;
   border-top: none;
-  padding: 20px 24px;
+  padding: 32px 16px;
 }
 .cards-subtitle {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: var(--secondary-txt-color);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  color: var(--dark);
 }
 .cards-desc {
   margin-top: 4px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.88;
-  color: var(--main-txt-cl);
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  color: var(--text);
 }
 .overlay-cards-img {
   position: relative;
@@ -1152,9 +1155,6 @@ address {
   justify-content: center;
   margin-right: 9px;
 }
-/* .accept input:checked + label .checkbox {
-  border: 2px solid var(--modal-overlay);
-} */
 .input-checkbox:checked + .modal-accept > .checkbox {
   background-color: var(--pressed-state);
 }
@@ -1162,7 +1162,7 @@ address {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.64px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-weight: 500;
